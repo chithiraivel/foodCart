@@ -1,0 +1,188 @@
+:root {
+    --colour-1: #001542;
+    --colour-2: #085454;
+    --colour-3: #7A7A7A;
+    --colour-4: #FFFFFF;
+    --colour-5: #FFB30D;
+    --colour-6: #7a7a7a69;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f6fa;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.navbar {
+    position: sticky;
+    width: 100%;
+    background-color: var(--colour-2);
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    z-index: 1;
+}
+
+.navbar-banner {
+    color: var(--colour-4);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.nav-cart {
+    color: var(--colour-4);
+    width: 40px;
+    padding: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.cart-items {
+    position: absolute;
+    top: 0px;
+    right: 25px;
+    height: 20px;
+    width: 20px;
+    background-color: var(--colour-3);
+    text-align: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.slider {
+    min-height: calc(50vh - 50px);
+    background: url('/images/1.jpg') center/cover no-repeat;
+    position: relative;
+}
+
+.brand-banner {
+    background-color: var(--colour-6);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    text-align: center;
+
+}
+
+.brand-banner h3 {
+    font-size: 55px;
+    font-family: serif;
+    color: var(--colour-5);
+    text-shadow:
+        2px 1px 1px var(--colour-2),
+        5px 1px 2px var(--colour-1);
+    cursor: pointer;
+    transition: transform 0.5s ease-out;
+    animation: 1s ease-out 0s 3 slideAnimation;
+}
+
+@keyframes slideAnimation {
+    0% {
+        transform: translatey(-100%)
+    }
+
+    100% {
+        transform: translatey(0)
+    }
+}
+
+.brand-banner h3:hover {
+    transform: scale(1.02);
+}
+
+.brand-banner p {
+    font-size: 16px;
+    color: var(--colour-4);
+    text-shadow: 1px 0px 1px var(--colour-5);
+    font-weight: 400;
+}
+
+.menu-item {
+    background-color: var(--colour-2);
+    display: flex;
+    justify-content: center;
+}
+
+.menu-item ul {
+    list-style: none;
+}
+
+.menu-item ul li {
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    width: 80px;
+    text-align: center;
+}
+
+.menu-item ul li a {
+    color: #f5f6fa;
+    text-decoration: none;
+}
+
+#txtFoodType {
+    background-color: var(--colour-5);
+    color: var(--colour-2);
+    padding: 10px;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 2px 1px 5px var(--colour-4);
+}
+
+.products-container{
+    width: 90vw;
+    margin: 0 auto;
+    display: grid;
+   grid-template-columns: repeat(auto-fit,
+   minmax(260px,1fr));
+   grid-column: 15px;
+}
+
+.product {
+    background-color: var(--colour-4);
+    box-shadow: rgba(0,0, 0, 0.15);
+    position: relative;
+}
+
+.img-container{
+    height: 200px;
+    overflow: hidden;
+}
+.product-img{
+    width: 100%;
+    height: 100%;
+}
+
+.product h3,
+.product h4{
+    text-align: center;
+    margin-top: 5px;
+}
+.product h5{
+    margin-top: 10px;
+    color: var(--colour-5);
+    background: var(--colour-1);
+    padding: 5px;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.btn-item{
+    border: none;
+    padding: 12px 8px 12px 8px;
+    background-color: var(--colour-3);
+    font-size: 15px;
+    position: absolute;
+    
+}
